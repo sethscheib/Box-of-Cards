@@ -1,0 +1,42 @@
+
+Structure:
+
+Main Screen
+
+    Game
+    
+        Single/multi player
+        
+        game_type (go fish, euchre, etc)
+        
+        Loop move by ticking game_type
+
+        Game over -> return to main screen
+        
+        
+    Settings
+
+        TODO
+  
+Possible Classes:
+	euchre();
+	goFish();
+	poker();
+	JPanel();
+	JFrame();
+	runGame();
+	card();
+	deck();
+	
+  
+Idea:
+
+The idea is every game runs in states (turn by turn basis). So if we treat each game (denoted as game_type) to
+act in states we can easily define a game. For example player one's turn is a state. In this state he has multiple
+options available but player 2 cannot go until player 1 is finished. Every turn (denoted by a tick) will be controlled
+by a game enviroment (denoted game). This holds all of the settings for the game (at this point single/multi player).
+Game is the main flow class, it determines the game_type and controls the changing of states in the game_type. This
+class does not need to be very robust. Due to this being a MVC program it needs to be somewhat disconnected from itself.
+In that sense the game class would have a series of methods called: set_single_player, set_multi_player and start_game_type.
+So the view aspect of the app can ONLY set the amount of players and start the game.
+

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <Button
+        android:id="@+id/leftButton"
+        android:layout_width="125dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="leftPlayNextPressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rightButton"
+        android:layout_width="125dp"
+        android:layout_height="250dp"
+        android:background="@android:color/transparent"
+        android:onClick="rightPlayNextPressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:onClick="playerTypePressed"
+        app:layout_constraintBottom_toBottomOf="@+id/comingSoon"
+        app:layout_constraintEnd_toEndOf="@+id/comingSoon"
+        app:layout_constraintStart_toStartOf="@+id/comingSoon"
+        app:layout_constraintTop_toTopOf="@+id/comingSoon" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backbuttons"
+        android:onClick="backMainButtonPressed"
+        android:text="Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/multiPlayer"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="334dp"
+        android:layout_marginLeft="325dp"
+        android:layout_marginRight="334dp"
+        android:layout_marginStart="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/multiplayer" />
+
+    <ImageView
+        android:id="@+id/comingSoon"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="334dp"
+        android:layout_marginLeft="325dp"
+        android:layout_marginRight="334dp"
+        android:layout_marginStart="325dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/singleplayer" />
+
+    <ImageView
+        android:id="@+id/leftNext"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/buttonnext" />
+
+    <ImageView
+        android:id="@+id/rightNext"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:rotation="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/buttonnext" />
+
+</android.support.constraint.ConstraintLayout>
